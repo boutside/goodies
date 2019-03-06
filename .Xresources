@@ -1,0 +1,94 @@
+! Disable ISO 14755 unicode input so we can use Ctrl-Shift bindings
+URxvt.iso14755:        false
+URxvt.iso14755_52:     false
+
+! Disable Ctrl-Alt-c & Ctrl-Alt-v bindings (optional)
+URxvt.keysym.C-M-c:    builtin-string:
+URxvt.keysym.C-M-v:    builtin-string:
+
+! Bind Ctrl-Shift-c & Ctrl-Shift-v to copy and paste
+! I dont know why, but I needed to use hex keysym values to get it to work
+URxvt.keysym.C-S-0x43: eval:selection_to_clipboard
+URxvt.keysym.C-S-0x56: eval:paste_clipboard
+
+! cursor mode for full on tryhard mode
+URxvt.cursorUnderline: 0
+
+! Theme / apperance
+Xft.rgba: rgba
+Xft.antialias: 1
+URxvt*font: xft:Terminal:pixelsize=13:style=bold
+
+! URxvt
+URxvt.modifier: mod1
+URxvt*loginShell: true
+URxvt*dynamicColors: on
+URxvt.imLocale: en_US.UTF-8
+URxvt.saveLines: 5000
+URxvt.scrollBar: false
+URxvt.scrollstyle: plain
+URxvt*termName: xterm-256color
+URxvt.transparent: false
+URxvt.visualBell: false
+URxvt*depth: 32
+URxvt.letterSpace: -1
+URxvt.internalBorder: 15
+
+! Colors
+*.boldMode: true
+*.colorBDMode: false
+!*.colorBD: cyan
+
+! Base16 Eighties Red
+! col1 = background color
+#define col1 [75]#0a0000
+! col2 = no clue 
+!#define col2 #B73C33
+#define col2 #00ff00
+! col3 = username/pwd prompt
+!#define col3 #AD6143
+#define col3 #A8A392
+! col4 = character device && vim numbers
+!#define col4 #A8A392
+#define col4 #5D5E5A
+! col5 = directories
+!#define col5 #C08552
+#define col5 #eeeeee
+! no clue
+!#define col6 #aa632f
+#define col6 #ff0000
+! col7 = link
+!#define col7 #5D5E5A
+#define col7 #4444ff
+! col8 = processes (dr-xr-xr-x directories)
+!#define col8 #D8C5B8
+#define col8 #ffffff
+
+!*.foreground:   #da2b2b
+*.foreground:	#c93333
+*.background:   col1
+*.cursorColor:  #ff3333
+*.cursorBlink:  true
+
+*.color0:       col1
+*.color1:       col2
+*.color2:       col3
+*.color3:       col4
+*.color4:       col5
+*.color5:       col6
+*.color6:       col7
+*.color7:       col8
+*.color8:       col1
+*.color9:       col2
+*.color10:      col3
+*.color11:      col4
+*.color12:      col5
+*.color13:      col6
+*.color14:      col7
+*.color15:      col8
+! *.color16:      base09
+! *.color17:      base0F
+! *.color18:      base01
+! *.color19:      base02
+! *.color20:      base04
+! *.color21: base06
